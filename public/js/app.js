@@ -1,15 +1,15 @@
-angular.module("FinalApp",["lumx","ngRoute"])
+angular.module("FinalApp",["lumx","ngRoute","ngResource"])
 .config(function($routeProvider){
 	$routeProvider
 		.when("/", {
-			controller: "MainController",
+			controller: "PostController",
 			templateUrl: "templates/home.html"
 		})
 		/*.when("/principal", {
 			controller: "BodyController",
 			templateUrl: "templates/home.html"
 		})
-		.when("/aboutUs", {
+		/*.when("/aboutUs", {
 			templateUrl: "templates/home3.html"
 		})
 		.when("/users", {
