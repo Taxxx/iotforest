@@ -1,17 +1,21 @@
-<div flex-item="6">
-	<div class="card top-space">
-		<div class="p+  bgc-deep-orange-400">
-			<strong class="fs-headline display-block tc-red-900">
-				tttt
+<div flex-item="8">
+	<div class="card top-space postForm">
+		<div class="p+">
+			<strong class="fs-headline display-block">
+				Tu momento salvaje<a href="#/" class="btn btn--m btn--blue btn--icon" lx-tooltip="¿Qué es tu momento salvaje?" lx-ripple><i class="mdi mdi-help-circle"></i></a>
 			</strong>
 			<div class="paragraph fs-body-1 mt+">
-				xxxx
+				<lx-text-field label="Tu aporte es importante">
+            		<input type="text" ng-model="textFields.lastName">
+        		</lx-text-field>
 			</div>
 		</div>
 		<div class="card__actions">
-			<a href="#/post/{{post.id}}" class="btn btn--m btn--blue btn--flat" lx-ripple>Leer Mas</a>
-			<a href="#/posts/edit/{{post.id}}" class="btn btn--m btn--orange btn--flat" lx-ripple>Editar</a>
-			<a ng-click="removePost(post)" class="btn btn--m btn--red btn--flat" lx-ripple>Eliminar</a>
+			<a href="#/" class="btn btn--m btn--blue btn--icon" lx-tooltip="Sube una imagen" lx-ripple><i class="mdi mdi-file-image"></i></a>
+			<a href="#/" class="btn btn--m btn--green btn--icon" lx-tooltip="Sube un video" lx-ripple><i class="mdi mdi-file-video"></i></a>
+			<a href="#/" class="btn btn--m btn--red btn--icon" lx-tooltip="¿Cómo te sientes?" lx-ripple><i class="mdi mdi-emoticon"></i></a>
+			<a href="#/" class="btn btn--m btn--orange btn--icon" lx-tooltip="¿Dónde te encuentras?" lx-ripple><i class="mdi mdi-map-marker"></i></a>
+			<!--a ng-click="removePost(post)" class="btn btn--m btn--red btn--raised" lx-ripple>Eliminar</a-->
 		</div>		
 	</div>
 
@@ -32,7 +36,7 @@
 
 		
 		<div class="card__img card__img--top">
-                <img src="http://lorempixel.com/800/300/">
+                <img src="http://lorempixel.com/900/300/">
                 <span class="fs-headline tc-white-1 display-block">{{post.title}}</span>
             </div>
 
