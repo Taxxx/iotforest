@@ -1,5 +1,5 @@
 angular.module("FinalApp")
-	.controller("MainController", function($scope,LxDialogService,LxNotificationService,$resource,PostResource){
+	.controller("MainController", function($scope,LxDialogService,LxNotificationService,$resource,PostResource,Login){
 		$scope.nombre = "Henrry :D";
 
 
@@ -29,6 +29,18 @@ angular.module("FinalApp")
 		{
 		    LxNotificationService.info('Dialog closed!');
 		};
+
+		$scope.LoginFacebook = function()
+		{
+		    Login.Facebook()
+				.success(function() {
+					alert(":D");
+					//$scope.pets = data;
+					//$scope.loading = false;
+				});
+		};
+
+		
 
 
 	})

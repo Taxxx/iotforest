@@ -4,7 +4,7 @@ var app      = express(); 								// create our app w/ express
 var mongoose = require('mongoose'); 					// mongoose for mongodb
 var passport = require('passport');
 var flash    = require('connect-flash');
-var port  	 = process.env.port || 3000; 				// set the port
+var port  	 = process.env.port || 8080; 				// set the port
 var database = require('./config/database'); 			// load the database config
 var morgan   = require('morgan');
 var cookieParser = require('cookie-parser');
@@ -30,7 +30,7 @@ app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 
 // routes ======================================================================
-require('./app/routes/home.js')(app);
+require('./app/routes/home.js')(app, passport);
 
 // listen (start app with node server.js) ======================================
 app.listen(port);
